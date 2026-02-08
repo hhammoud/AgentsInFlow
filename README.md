@@ -14,6 +14,7 @@ A desktop application to orchestrate multiple AI coding agents (Claude Code, Cod
 - **Token analytics** — Track input, output, cached, and reasoning tokens per execution
 - **Session recovery** — Resume interrupted executions after app restart
 - **Smart MCP session sharing** — Dynamic Chrome MCP port injection for multi-agent browser sessions
+- **Free and fully unlocked** — All features currently available to all users
 
 ![Terminal View](.github/images/terminal-view.png)
 
@@ -33,14 +34,20 @@ AgentsInFlow auto-detects installed CLIs. Credentials persist across sessions.
 
 1. Download the latest release from [GitHub Releases](https://github.com/AgentsInFlow/AgentsInFlow/releases/latest)
 2. **macOS**: Open the DMG and drag AgentsInFlow to Applications
-3. **Windows**: Run the installer
-4. Launch the application
+3. Launch the application
 
 ### Supported Platforms
 
-- macOS (Apple Silicon + Intel)
-- Windows (coming soon)
-- Linux (coming soon)
+- macOS (Apple Silicon)
+- Windows (planned)
+- Linux (planned)
+
+## Updates
+
+- Automatic checks run in background (first check around 15 seconds after launch, then every 4 hours)
+- Manual check is available in app menu:
+  - macOS: `AgentsInFlow` → `Check for Updates...`
+  - Windows/Linux: `Help` → `Check for Updates...`
 
 ## Quick Start
 
@@ -58,6 +65,40 @@ Per-project engine settings are stored in your repository:
 | Claude | `.claude/settings.local.json` |
 | Codex | `.codex/config.toml` |
 | Cursor | `.cursor/settings.json` |
+
+## Development
+
+Prerequisites: Node.js + `pnpm`
+
+```bash
+# Install dependencies
+pnpm install
+
+# Run Electron app
+pnpm dev:electron
+
+# Run web UI only
+pnpm dev:web
+
+# Run tests
+pnpm test:run
+```
+
+### Building
+
+```bash
+# macOS package build
+pnpm build:mac:limited
+
+# signed + notarized mac release build
+APPLE_NOTARY_PROFILE=<your-profile> pnpm build:mac:release:signed
+```
+
+## Releasing
+
+Releases are currently published manually (no GitHub release pipeline in use yet).
+
+See `docs/releasing.md` for the exact signed build + publish flow.
 
 ## License
 
