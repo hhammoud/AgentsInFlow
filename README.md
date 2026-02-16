@@ -66,40 +66,6 @@ Per-project engine settings are stored in your repository:
 | Codex | `.codex/config.toml` |
 | Cursor | `.cursor/settings.json` |
 
-## Development
-
-Prerequisites: Node.js + `pnpm`
-
-```bash
-# Install dependencies
-pnpm install
-
-# Run Electron app
-pnpm dev:electron
-
-# Run web UI only
-pnpm dev:web
-
-# Run tests
-pnpm test:run
-```
-
-### Building
-
-```bash
-# macOS package build
-pnpm build:mac
-
-# signed + notarized mac release build
-APPLE_NOTARY_PROFILE=<your-profile> pnpm build:mac:release:signed
-```
-
-## Releasing
-
-Releases are currently published manually (no GitHub release pipeline in use yet).
-
-See `docs/releasing.md` for the exact signed build + publish flow.
-
 ## License
 
 AgentsInFlow is proprietary software offered free during beta. See [Terms of Service](https://agentsinflow.github.io/terms.html) for details.
