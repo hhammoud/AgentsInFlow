@@ -77,7 +77,6 @@ AgentsInFlow is proprietary software offered free during beta. See [Terms of Ser
 - [Changelog](https://aif.inovisum.com/changelog.html)
 - [Roadmap](https://aif.inovisum.com/roadmap.html)
 
-## Contact
+---
 
-- [GitHub](https://github.com/hhammoud)
-- [Email](mailto:aif@inovisum.com)
+Built by [Hassan Hammoud](https://linkedin.com/in/hassanhammoud) · [@hghammoud](https://x.com/hghammoud) · [GitHub](https://github.com/hhammoud)
